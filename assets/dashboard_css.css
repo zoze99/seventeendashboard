@@ -29,6 +29,26 @@ font-family: 'Press Start 2P', cursive;  */
 }
 
 
+
+.blinking{
+	-webkit-animation:blink 0.5s ease-in-out infinite alternate;
+    -moz-animation:blink 0.5s ease-in-out infinite alternate;
+    animation:blink 0.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+
 :root{
     font-size: 12px;
 }
@@ -42,6 +62,7 @@ body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-color: snow;
 }
 
 /* common class */
@@ -52,6 +73,22 @@ body{
 
 
 /* onboard section */
+
+#bgm{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+}
+
+
+#bgm-source{
+    position: fixed;
+    top: 6px;
+    right: 78px;
+    font-family: 'NeoDunggeunmo', sans-serif;
+    font-size: 8px;
+}
 
 .service-name{
     font-family: 'Press Start 2P', cursive;
@@ -122,9 +159,38 @@ h1{
     margin-right: 10px;
 }
 
+.warning-message{
+    font-family: 'Press Start 2P';
+    color: #92A8D1;
+    font-size: 1.2vw;
+}
+
 img{
     width: 100%;
     background-size: cover;
+}
+
+#profile-image{
+    position: relative;
+    bottom: 10px;
+}
+
+.noti-message{
+    font-family: 'NeoDunggeunmo';
+    font-size: 1vw;
+    text-align: center;
+    line-height: 130%;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.intro-noti{
+    margin: 0px 50px;
+    position: absolute;
+    top: 83vw;
+    left: 15vw;
+    right: 15vw;
 }
 
 
@@ -136,6 +202,7 @@ img{
     flex-direction: column;
     justify-content: center;
     margin: 0px;
+    visibility: visible;
 }
 
 #welcome-message{
@@ -144,4 +211,8 @@ img{
     font-family: 'TmoneyRoundWindExtraBold', serif;
     text-align: center;
     margin-top: 4vw;
+}
+
+.ploy-container.plotly{
+    margin: 0px 10vw;
 }
